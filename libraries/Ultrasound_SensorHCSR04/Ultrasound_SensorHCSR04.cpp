@@ -1,4 +1,4 @@
-#include "Ultrasound_Sensor-HC-SR04.h"
+#include "Ultrasound_SensorHCSR04.h"
 
 Ultrasound_SensorHCSR04::Ultrasound_SensorHCSR04():
 trigger_pin{DEFAULT_TRIGGER_PIN}, echo_pin{DEFAULT_ECHO_PIN}{

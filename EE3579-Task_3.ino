@@ -1,4 +1,4 @@
-#include "Ultrasound_Sensor-HC-SR04.h"
+#include "Ultrasound_SensorHCSR04.h"
 
 Ultrasound_SensorHCSR04 Sensor;
 
@@ -11,11 +11,7 @@ void setup(){
 }
 
 void loop(){
-  distance = Sensor.ping();
-  
-  /*Serial.print("Time: ");
-  Serial.print(millis());
-  Serial.print(" - ");*/
+  distance = Sensor.median();
   
   Serial.println(distance);
   Serial.println("");
