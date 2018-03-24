@@ -4,6 +4,7 @@
 #include <Arduino.h>
 
 uint32_t recordedInterrupts[8];
+uint32_t totalInterrupts[8];
 
 void interruptSetup(uint8_t interrupt, uint8_t setting){
 		EIMSK |= (1 << interrupt);
@@ -24,10 +25,12 @@ void interruptSetup(uint8_t interrupt, uint8_t setting){
 
 ISR(INT0_vect){
 	recordedInterrupts[0]++;
+	totalInterrupts[0]++;
 }
 
 ISR(INT1_vect){
 	recordedInterrupts[1]++;
+	totalInterrupts[1]++;
 }
 
 /*ISR(INT2_vect){

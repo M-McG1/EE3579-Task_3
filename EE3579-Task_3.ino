@@ -2,14 +2,13 @@
 #include "Interrupts_External.h"
 #include "Interrupts_Internal.h"
 
-Ultrasound_SensorHCSR04 Sensor;
-
+/*Ultrasound_SensorHCSR04 Sensor;*/
 
 uint32_t distance{0};
 
 void setup(){
   sei();
-  Serial.begin(9600);
+  Serial.begin(250000);
   pinMode(11, OUTPUT);
   pinMode(2, INPUT);
   digitalWrite(11, HIGH);
@@ -20,15 +19,15 @@ void setup(){
 }
 
 void loop(){
-  distance = Sensor.median();
+  /*distance = Sensor.median();
 
   Serial.print(",Distance: ");
-  Serial.println(distance);
+  Serial.println(distance);*/
 
-  Serial.print(",Activations 0: ");
-  Serial.println(activations[0]);
-  Serial.print(",Activations 1: ");
-  Serial.println(activations[1]);
+  Serial.print("Activation 0: ");
+  Serial.println(activations[0]*PI*57/49);
+  Serial.print("Activation 1: ");
+  Serial.println(activations[1]*PI*57/49);
 
   delay(100);
 }
