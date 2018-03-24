@@ -12,8 +12,7 @@
 #define DEFAULT_TRIGGER_PIN 12	//Trigger pin default.
 #define DEFAULT_ECHO_PIN 13		//Echo pin default.
 
-class Ultrasound_SensorHCSR04
-{
+class Ultrasound_SensorHCSR04{
 private:
 	
 	uint8_t trigger_pin, echo_pin, counterA, counterB;
