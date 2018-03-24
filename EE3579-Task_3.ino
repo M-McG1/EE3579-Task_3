@@ -12,10 +12,9 @@ void setup(){
 
 void loop(){
   distance = Sensor.median();
-  
+
   Serial.println(distance);
   Serial.println("");
-  
-  
+
   //delay();
 }
