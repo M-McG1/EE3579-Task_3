@@ -5,10 +5,6 @@
 
 uint32_t recordedInterrupts[8];
 
-void interruptEnable(){
-	sei();
-}
-
 void interruptSetup(uint8_t interrupt, uint8_t setting){
 		EIMSK |= (1 << interrupt);
 
