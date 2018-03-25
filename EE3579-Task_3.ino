@@ -15,7 +15,7 @@ void setup(){
   
   interruptSetup(0, 2);
   interruptSetup(1, 2);
-  timer_setup(100);
+  timer_setup(200);
 }
 
 void loop(){
