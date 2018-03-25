@@ -1,6 +1,7 @@
 #include "Ultrasound_SensorHCSR04.h"
 #include "Interrupts_External.h"
 #include "Interrupts_Internal.h"
+#include <avr\sleep.h>
 
 /*Ultrasound_SensorHCSR04 Sensor;*/
 
@@ -29,5 +30,5 @@ void loop(){
   Serial.print("Activation 1: ");
   Serial.println(activations[1]*PI*57/49);
 
-  delay(100);
+  sleep_cpu();
 }
