@@ -36,15 +36,6 @@ void timer_setup(uint16_t a){
 	//DDRD = (1 << PD5);
 }
 
-ISR(TIMER0_COMPA_vect){
-	if(counter == time){
-		counter = 0;
-		activations[0] = recordedInterrupts[0] * 100 / time;
-		activations[1] = recordedInterrupts[1] * 100 / time;
-		recordedInterrupts[0] = 0;
-		recordedInterrupts[1] = 0;
-	}
-	else{counter++;}
-}
+
 
 #endif
