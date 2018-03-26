@@ -15,7 +15,7 @@ private:
 	double kP, kI, kD;
 	uint16_t intervalTime;
 	uint32_t now, previous;
-	double errorP, errorI, errorD;
+	int32_t errorP, errorI, errorD;
 	uint32_t output;
 	int32_t timeSinceLast;
 	double errorPLast;
@@ -71,7 +71,11 @@ public:
 		errorD = 0;
 	}
 	
-	uint32_t get_error(){
+	uint32_t get_errorP(){
+		return errorP;
+	}
+	
+	uint32_t get_errorI(){
 		return errorI;
 	}
 };

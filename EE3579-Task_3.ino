@@ -50,13 +50,18 @@ void setup(){
 void loop(){
   /*distance = Sensor.median();
 
-  Serial.print(",Distance: ");
+  Serial.print("Distance: ");
   Serial.println(distance);*/
-  pwmRight = PIDRight.compute(activations[1], 200);
+  pwmRight = PIDRight.compute(activations[1], 100);
   MotorRight.speedset(pwmRight); //MotorRight
-  pwmLeft = PIDLeft.compute(activations[1], 200);
+  pwmLeft = PIDLeft.compute(activations[1], 100);
   MotorLeft.speedset(pwmLeft); //MotorRight
 
+  Serial.print("ErrorP: ");
+  Serial.print(PIDRight.get_errorP());
+  Serial.print(",ErrorI: ");
+  Serial.print(PIDRight.get_errorI());
+  
   Serial.print(",SpeedR: ");
   Serial.print(activations[1]);
   Serial.print(",PWM: ");
