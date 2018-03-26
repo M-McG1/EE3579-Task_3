@@ -38,7 +38,7 @@ void setup(){
   
   interruptSetup(0, 2);
   interruptSetup(1, 2);
-  timer_setup(200);
+  timer_setup(100);
   MotorLeft.start();
   MotorRight.start();
   MotorRight.directionset(1);
